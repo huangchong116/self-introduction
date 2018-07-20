@@ -5,10 +5,42 @@ body,html,a,p,h1,h2,h3,h4,h5,h6,div,span,dl,dd,dt,i,em{
 	text-decoration: none;
 	line-height: 1.1;
 }
+#app,html,body,#app>div,#app>div>div {
+	height: 100%;
+	width: 100%;
+}
 .home {
+	height: 100%;
 	.ant-carousel {
 		div{
 			background: #ffecb1;
+		}
+	}
+	svg {
+		position: relative;
+		left: 50%;
+		margin-left: -350px;
+	}
+	.test1 {
+		stroke-dasharray: 3000;
+		stroke-dashoffset: 3000;
+		-webkit-animation: dash 5s linear forwards;
+		animation: dash 5s linear forwards;
+	}
+	.test2 {
+		stroke-dasharray: 1200;
+		stroke-dashoffset: 1200;
+		-webkit-animation: dash 5s linear forwards;
+		animation: dash 5s linear forwards;
+	}
+	@-webkit-keyframes dash {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+	@keyframes dash {
+		to {
+			stroke-dashoffset: 0;
 		}
 	}
 }
